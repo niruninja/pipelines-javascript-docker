@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: niruninjapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: niruninjapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: niruninjapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: niruninjapipelinesjavascriptdocker 
+          image: mycontainerregistryn1nj4.azurecr.io/niruninjapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
